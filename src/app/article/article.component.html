@@ -1,0 +1,15 @@
+<div class="container">
+    <!-- if an article is selected, show it here with all description -->
+    <div *ngIf="this.mainService.selectedArticle" class="jumbotron">
+        <div class="row">
+            <div class="col-sm-6">
+                <p-galleria [images]="imagesArticle" panelWidth="500" panelHeight="313" [showCaption]="false"></p-galleria>
+            </div>
+            <div class="col-sm-6">
+                <h3>{{this.mainService.selectedArticle.name}}</h3>
+                {{this.mainService.selectedArticle.description}}<br/>
+                <br/><button pButton type="button" label="Add to cart" (click)="addToCart(this.mainService.selectedArticle)"></button>
+            </div>
+        </div>
+    </div>
+</div>

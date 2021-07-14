@@ -1,0 +1,25 @@
+<div class="container">
+    <div >
+        <!-- If we have something in the cart, show it -->
+        <div class="cart" *ngIf="mainService.articlesInCart.length>0">
+            <h3 *ngIf="mainService.articlesInCart.length===1">Your cart contains {{mainService.articlesInCart.length}} article :</h3>
+            <h3 *ngIf="mainService.articlesInCart.length>1">Your cart contains {{mainService.articlesInCart.length}} articles :</h3>
+            <ul *ngFor="let article of mainService.articlesInCart">
+                <li><a (click)="mainService.onArticleSelected(article)">
+                        <img src="assets/images/{{article.reference}}.jpg" alt="...">
+                        {{article.name}} - {{article.price}}$
+                    </a> <a class="float-right fa fa-trash" style="color:red" (click)="removeArticle(article.reference)"></a></li>
+            </ul>
+            <div>
+                <h2>Total price : {{mainService.totalPrice}}$</h2>
+            </div>
+            <button pButton type="button" label="Validate cart" (click)="validateCart()"></button>
+        </div>
+
+        <!-- When the cart is empty -->
+        <div *ngIf="mainService.articlesInCart.length==0">
+            <h2 style="text-align: center">Your cart is empty :/</h2>
+            <app-main></app-main>
+        </div>
+    </div>
+</div>

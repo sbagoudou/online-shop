@@ -1,0 +1,19 @@
+<div class="container">
+    <!-- Show all articles of current category -->
+    <div  class="flex-container wrap">
+        <div *ngFor="let article of mainService.allArticles" >
+            <div *ngIf="article.category==categorie" class="flex-item" (click)="onSelect(article)" >
+                <div class="card" style="width: 15rem;">
+                    <a (click)="mainService.onArticleSelected(article)">
+                        <img src="assets/images/{{article.reference}}.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{article.name}} - {{article.price}}$</h5>
+                            <!--                            <p class="card-text">{{article.description}}</p>-->
+                            <!--                            <a (click)="onSelect(article)" class="btn btn-primary">Go somewhere</a>-->
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

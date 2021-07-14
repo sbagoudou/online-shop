@@ -1,0 +1,42 @@
+[
+{
+    "reference": "BRACELET_XX0F",
+	"name": "Bracelet motif",
+    "category": "fashion",
+    "price": "10",
+	"featured": "Y",
+	"description": "Bla bla bla bla Bracelet"
+},
+{
+    "reference": "KEY_HOLDER_YZ",
+	"name": "Key holder",
+    "category": "fashion",
+    "price": "10",
+	"featured": "N",
+	"description": "Bla bla bla bla Key holder"
+},
+{
+    "reference": "WALLET_WH_PP",
+	"name": "Wallet white",
+    "category": "fashion",
+    "price": "10",
+	"featured": "N",
+	"description": "Bla bla bla bla wallet white"
+},
+{
+    "reference": "WALLET_RD_88",
+	"name": "Wallet red",
+    "category": "fashion",
+    "price": "10",
+	"featured": "Y",
+	"description": "Bla bla bla bla wallet red"
+},
+{
+    "reference": "FOOD_MNU",
+	"name": "Food",
+    "category": "food",
+    "price": "10",
+	"featured": "N",
+	"description": "Bla bla bla bla food"
+}
+]

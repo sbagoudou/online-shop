@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>Featured</h1>
+    </div>
+    <!-- Show all featured articles -->
+    <div  class="flex-container wrap">
+        <div *ngFor="let article of mainService.featuredArticles" >
+            <div class="flex-item" (click)="onSelect(article)" >
+                <div class="card" style="width: 15rem;">
+                    <a (click)="mainService.onArticleSelected(article)">
+                        <img src="assets/images/{{article.reference}}.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{article.name}} - {{article.price}}$</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
